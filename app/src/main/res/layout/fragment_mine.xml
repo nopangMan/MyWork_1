@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_mine_banner"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:alpha="0.8"
+        android:background="@drawable/mine_banner_shape">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_mine_user_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/add_pic"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"/>
+
+        <Button
+            android:id="@+id/btn_user_message_edit"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/iv_mine_user_img"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="28dp"
+            android:layout_toRightOf="@id/iv_mine_user_img"
+            android:background="@drawable/btn_login_shape"
+            android:text="@string/test_edit_mine_message"
+            android:textColor="#000080"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_mine_text_top"
+            style="@style/MineFragmentBannerText"
+            android:layout_alignTop="@+id/iv_mine_user_img"
+            android:layout_toRightOf="@+id/btn_user_message_edit"
+            android:text="@string/test_user_dynamic"/>
+
+        <TextView
+            android:id="@+id/tv_mine_text_center"
+            style="@style/MineFragmentBannerText"
+            android:layout_below="@+id/tv_mine_text_top"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/btn_user_message_edit"
+            android:text="@string/test_user_focus"/>
+
+        <TextView
+            android:id="@+id/tv_mine_text_bottom"
+            style="@style/MineFragmentBannerText"
+            android:layout_below="@+id/tv_mine_text_center"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/btn_user_message_edit"
+            android:text="@string/test_user_fans"/>
+
+        <TextView
+            android:id="@+id/tv_mine_user_dynamic"
+            style="@style/MineFragmentBannerText"
+            android:layout_alignTop="@+id/tv_mine_text_top"
+            android:layout_toRightOf="@+id/tv_mine_text_top"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/tv_mine_user_focus"
+            style="@style/MineFragmentBannerText"
+            android:layout_alignTop="@+id/tv_mine_text_center"
+            android:layout_toRightOf="@+id/tv_mine_text_center"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/tv_mine_user_fans"
+            style="@style/MineFragmentBannerText"
+            android:layout_alignTop="@+id/tv_mine_text_bottom"
+            android:layout_toRightOf="@+id/tv_mine_text_top"
+            android:text="0"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_below="@+id/rl_mine_banner"
+        android:layout_marginTop="10dp"
+        android:alpha="0.8"
+        android:background="@drawable/mine_banner_shape">
+
+        <RelativeLayout
+            android:id="@+id/rl_user_favourite_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.8"
+            android:background="@drawable/mine_items_shape"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/iv_favourite_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/iv_user_favourite_article"/>
+
+            <TextView
+                android:id="@+id/tv_favourite_text"
+                style="@style/MineFragmentBannerText"
+                android:layout_alignTop="@+id/iv_favourite_img"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/iv_favourite_img"
+                android:text="@string/test_user_favourite_article"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_user_collect_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_user_favourite_article"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.8"
+            android:background="@drawable/mine_items_shape"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/iv_collect_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/iv_user_collect_article"/>
+
+            <TextView
+                android:id="@+id/tv_collect_text"
+                style="@style/MineFragmentBannerText"
+                android:layout_alignTop="@+id/iv_collect_img"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/iv_collect_img"
+                android:text="@string/test_user_collect_article"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_user_articles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_user_collect_article"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.8"
+            android:background="@drawable/mine_items_shape"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/iv_articles_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/iv_user_articles"/>
+
+            <TextView
+                android:id="@+id/tv_articles_text"
+                style="@style/MineFragmentBannerText"
+                android:layout_alignTop="@+id/iv_articles_img"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/iv_articles_img"
+                android:text="@string/test_user_articles"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_night_module"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_user_articles"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.8"
+            android:background="@drawable/mine_items_shape"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/iv_night_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/iv_night_module"/>
+
+            <TextView
+                android:id="@+id/tv_night_text"
+                style="@style/MineFragmentBannerText"
+                android:layout_alignTop="@+id/iv_night_img"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/iv_night_img"
+                android:text="@string/test_night_module"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/sw_night_module"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_night_text"
+                android:layout_marginLeft="180dp"
+                android:layout_toRightOf="@+id/tv_night_text"
+                android:switchMinWidth="80dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_user_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_night_module"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.8"
+            android:background="@drawable/mine_items_shape"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/iv_user_settings_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/iv_user_settings"/>
+
+            <TextView
+                android:id="@+id/tv_user_settings_text"
+                style="@style/MineFragmentBannerText"
+                android:layout_alignTop="@+id/iv_user_settings_img"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/iv_user_settings_img"
+                android:text="@string/test_user_settings"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

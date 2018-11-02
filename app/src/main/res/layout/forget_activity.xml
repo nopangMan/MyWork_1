@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/login"
+              android:orientation="vertical">
+
+    <TextView
+        style="@style/LoginTextStyle"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/test_reset_pwd_by_memory"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LoginTextStyle"
+            android:text="@string/test_old_password"/>
+
+        <EditText
+            android:id="@+id/et_user_old_pwd"
+            style="@style/LoginEditTextStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LoginTextStyle"
+            android:text="@string/test_new_password"/>
+
+        <EditText
+            android:id="@+id/et_user_new_pwd"
+            style="@style/LoginEditTextStyle"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_reset_pwd_by_memory"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:alpha="0.5"
+        android:background="@drawable/btn_login_shape"
+        android:text="@string/test_reset_pwd"/>
+
+    <TextView
+        style="@style/LoginTextStyle"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/test_reset_pwd_by_email"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LoginTextStyle"
+            android:text="@string/test_person_email"/>
+
+        <EditText
+            android:id="@+id/et_user_reset_pwd_by_email"
+            style="@style/LoginEditTextStyle"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_reset_pwd_by_email"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:alpha="0.5"
+        android:background="@drawable/btn_login_shape"
+        android:text="@string/test_reset_pwd"/>
+</LinearLayout>

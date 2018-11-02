@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/login"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LoginTextStyle"
+            android:text="@string/test_person_account"/>
+
+        <EditText
+            android:id="@+id/et_user_account"
+            style="@style/LoginEditTextStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LoginTextStyle"
+            android:text="@string/test_person_password"/>
+
+        <EditText
+            android:id="@+id/et_user_password"
+            style="@style/LoginEditTextStyle"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LoginTextStyle"
+            android:text="@string/test_person_email"/>
+
+        <EditText
+            android:id="@+id/et_user_email"
+            style="@style/LoginEditTextStyle"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LoginTextStyle"
+            android:text="@string/test_person_desc"/>
+
+        <EditText
+            android:id="@+id/et_user_desc"
+            style="@style/LoginEditTextStyle"/>
+    </LinearLayout>
+    <TextView
+        android:text="注册后需要去邮箱认证哦~,亲"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_resign"
+        android:text="@string/test_resign"
+        android:layout_marginTop="50dp"
+        android:alpha="0.5"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_login_shape"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

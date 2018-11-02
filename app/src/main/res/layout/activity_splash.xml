@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context="com.fzc.lowcopyjiantalk.activity.SplashActivity">
+    <!--自定义的ViewPager,用来存放VideoItems-->
+    <com.fzc.lowcopyjiantalk.pager.SplashViewPager
+        android:id="@+id/vp_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:overScrollMode="ifContentScrolls"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+        <!-- Add as a direct child of your ViewPager -->
+        <com.fzc.lowcopyjiantalk.indicator.CirclePageIndicator
+            android:id="@+id/view_pager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="80dp"
+            app:fillColor="@color/colorAccent"
+            app:radius="4dp"
+            app:strokeColor="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/tv_enter"
+            style="@style/FrameButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:text="@string/test_start_first_page"/>
+    </FrameLayout>
+</FrameLayout>
